@@ -8,6 +8,7 @@ import GetAPIusingAxiosLib from "../pages/GetAPIusingAxiosLib";
 import GetAPIusingAxiosLib1 from "../pages/GetAPIusingAxiosLib1";
 import ShoppingCrtWithRedux from "../ShoppingCartWithRedux";
 import BookList from "../bookstore/BookList";
+import CreatePost from "../pages/CreatePost";
 
 const ProtectedRoute = () => {
   const { state, dispatch } = useContext(AuthContext);
@@ -30,6 +31,7 @@ const ProtectedRoute = () => {
         <Link to="/dashboard/getApiAxios1" style={{ margin: "0 10px" }}>API State Updates</Link>
         <Link to="/dashboard/getShoppingCrtWithRedux" style={{ margin: "0 10px" }}>Redux Shopping Cart</Link>
         <Link to="/dashboard/bookstore" style={{ margin: "0 10px" }}>Book Management</Link>
+        <Link to="/dashboard/create-post" style={{ margin: "0 10px" }}>Post API</Link>
         <button
           onClick={handleLogout}
           style={{
@@ -53,6 +55,7 @@ const ProtectedRoute = () => {
         <Route path="getApiAxios1" element={<GetAPIusingAxiosLib1 />} />
         <Route path="getShoppingCrtWithRedux" element={<ShoppingCrtWithRedux />} />
         <Route path="bookstore" element={<BookList />} />
+        <Route path="create-post" element={<CreatePost />} />
       </Routes>
     </div>
   );
